@@ -17,10 +17,16 @@ export class GithubRepositoryService {
   ) { }
 
   searchRepository(search: string) {
-    return this.http.get<GithubRepository[]>(this.baseUrl + 'GithubRepository/search?toSearch=s')
+    return this.http.get<GithubRepository[]>(this.baseUrl + `GithubRepository/search?toSearch=${search}`)
   }
 
-  bookmarkRepository(bookmarkedRepository: GithubRepository) {
-
+  getAllRepositories() {
+    return this.http.get<GithubRepository[]>(this.baseUrl + 'GithubRepository/GetAll')
   }
+
+  getAllRepositoriesByUsername(username: string) {
+    return this.http.get<GithubRepository[]>(this.baseUrl + `GithubRepository/${username}`);
+  }
+
+  
 }

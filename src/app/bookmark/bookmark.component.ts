@@ -14,14 +14,7 @@ export class BookmarkComponent {
   constructor(private githubRepositoryService: GithubRepositoryService) { }
 
   ngOnInit(): void {
-    this.githubRepositoryService.searchRepository("m").subscribe({
-      next: repositories => {
-        if (repositories) {
-          this.githubRepositories = repositories;
-        }
-      },
-      error: error => console.log(error)
-    })
+
   }
 
 

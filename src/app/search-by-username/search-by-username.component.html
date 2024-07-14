@@ -1,9 +1,9 @@
 <div class="mt-3">
-    <h2>Search Repositories</h2>
+    <h2>Search By Username Repositories</h2>
 </div>
 
 <app-search (searchChanged)="onSearchChanged($event)" [searchType]="searchType"></app-search>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5" >
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
     <app-repository-card *ngFor="let repository of githubRepositories$ | async" [githubRepository]="repository"></app-repository-card>
 </div>

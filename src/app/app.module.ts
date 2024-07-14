@@ -9,6 +9,8 @@ import { ListComponent } from './list/list.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
 import { RepositoryCardComponent } from './repositories/repository-card/repository-card.component';
 import { SharedModule } from './_modules/shared.module';
+import { SearchComponent } from './repositories/search/search.component';
+import { SearchByUsernameComponent } from './search-by-username/search-by-username.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SharedModule } from './_modules/shared.module';
     NavComponent,
     ListComponent,
     BookmarkComponent,
-    RepositoryCardComponent
+    RepositoryCardComponent,
+    SearchComponent,
+    SearchByUsernameComponent
   ],
   imports: [
     BrowserModule,
